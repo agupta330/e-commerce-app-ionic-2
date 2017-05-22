@@ -9,19 +9,22 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Product List</ion-title>
+    <ion-title>Listagem de Produto</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+
   <ion-list>
-  <ion-item *ngFor="let product of products">
-    <ion-avatar item-left>
-      <img src="https://ionicframework.com/dist/preview-app/www/assets/img/avatar-ts-woody.png">
-    </ion-avatar>
-    <h2>{{ product.name }}</h2>
-    <p>R$ {{ product.price_initial }}</p>
-  </ion-item>
-</ion-list>
+    <ion-item *ngFor="let product of products">
+      <ion-thumbnail item-left>
+        <img src="https://ionicframework.com/dist/preview-app/www/assets/img/avatar-ts-woody.png">
+      </ion-thumbnail>
+      <h2>{{ product.name }}</h2>
+      <p>R$ {{ product.price_initial }} <br /> {{ product.short_description }} </p>
+      <button ion-button clear item-right>Ver produto</button>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

@@ -17,7 +17,7 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item *ngFor="let product of products">
+    <ion-item *ngFor="let product of products" (click)="addItem(product)">
       <ion-thumbnail item-left>
         <img src="https://ionicframework.com/dist/preview-app/www/assets/img/avatar-ts-woody.png">
       </ion-thumbnail>

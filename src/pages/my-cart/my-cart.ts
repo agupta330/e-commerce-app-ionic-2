@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { CartProvider } from '../../providers/cart/cart';
 /**
  * Generated class for the MyCartPage page.
  *
@@ -14,10 +14,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MyCartPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+      public navCtrl: NavController,
+      public navParams: NavParams,
+      private cart: CartProvider,
+    ) {
   }
 
   ionViewDidLoad() {
+
     console.log('ionViewDidLoad MyCartPage');
   }
 

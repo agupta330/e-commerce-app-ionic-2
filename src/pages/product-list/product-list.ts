@@ -33,7 +33,7 @@ export class ProductListPage {
 
   addItem(item){
     this.cart.addItem(item);
-    this.navCtrl.push(MyCartPage);
+    this.navCtrl.setRoot(MyCartPage);
   }
 
 }
